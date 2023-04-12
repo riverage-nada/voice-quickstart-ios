@@ -666,6 +666,9 @@ extension ViewController: CXProviderDelegate {
         NSLog("provider:performSetHeldAction:")
         
         if let call = activeCalls[action.callUUID.uuidString] {
+            if call.isOnHold {
+                audioDevice.isEnabled = true
+            }
             call.isOnHold = action.isOnHold
             action.fulfill()
         } else {
