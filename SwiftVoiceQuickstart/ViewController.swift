@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         
         /* Please note that the designated initializer `CXProviderConfiguration(localizedName: String)` has been deprecated on iOS 14. */
         let configuration = CXProviderConfiguration(localizedName: "Voice Quickstart")
-        configuration.maximumCallGroups = 1
+        configuration.maximumCallGroups = 2
         configuration.maximumCallsPerCallGroup = 1
         callKitProvider = CXProvider(configuration: configuration)
         if let provider = callKitProvider {
